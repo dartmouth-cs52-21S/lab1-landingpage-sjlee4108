@@ -1,0 +1,563 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em;
+    padding:0em;
+    background-color:#20292a;
+    color:#a4bdc0;
+    overflow-x: hidden;
+}
+
+input[type="button"]{
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* Nav section */
+#menu{
+    display: flex;
+    width:100%;
+    height: 6em;
+    background-color:#2a3638;
+    padding:0em 3em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logoHeader{
+    font-size: 1.3em;
+    letter-spacing: 0.13em;
+    width: 7.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logoImg{
+    width: 2.5em;
+}
+
+#topNav{
+    width: 30em;
+}
+#topNav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+#topNav ul li:hover{
+    cursor: pointer;
+    color: #00b1ce;
+}
+
+/* main section */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+      
+}
+
+main h1{
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+main ul{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+main ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 14em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* Video section */
+h2{
+    font-size: 2.7em;
+    font-weight: 300;
+    text-align: center;
+    margin: 3em 0 1em 0;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*credit https://stackoverflow.com/questions/22995790/html-height-as-a-percentage-of-the-width-for-iframe*/
+#laptopScreen{
+    width: 64%;
+    margin: auto;
+    padding-top:36%;
+    position: relative;
+    border:solid black;
+    border-width: 1.5em 1.5em;
+    border-radius: 0.8em 0.8em 0 0;
+
+}
+#videoFrame{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/* credit https://stackoverflow.com/questions/41609308/curved-border-with-stroke-in-pure-css */
+#laptopBottom{
+    width: 80%;
+    height: 1.5em;
+    border-radius: 100%/0 0 2em 2em;
+    background-color: rgb(42,54,56);
+    margin:auto;
+    margin-bottom: 2em;
+}
+
+/*Blog related styles*/
+article{
+    width: 80%;
+    max-width: 55em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1em 0em 4em 0em;
+}
+
+.blogImage{
+    margin:0.2em;
+    width: 22em;
+    height:17em;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.25);
+}
+
+.blogImage:hover{
+    margin:0em;
+    width: 22.4em;
+    height: 17.4em;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+
+
+.blogSummary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 3em;
+    margin-right: 2em;
+    min-height: 16em;
+    min-width: 18em;
+    max-width: 24em;
+}
+
+.blogSummary h3{
+    font-size:2em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin:0em 0em 0.5em 0em;
+}
+
+.blogSummary p{
+    letter-spacing: 0.05em;
+}
+
+/* Style for label cards section */
+
+#labelCardContainer{
+    margin: 3em 0em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelCard{
+    display: flex;
+    flex-direction: column;
+    width: 21em;
+    align-items: center;
+    background-color: #2a3638;
+    box-sizing: border-box;
+    padding:0em 1em 1em 1em;
+    margin: 0em 2em;
+    box-shadow: 0.25em 0.25em 0.3em rgba(0, 0, 0, 0.2);
+
+}
+
+.labelCardProfile{
+    position: absolute;
+    width: 6em;
+    height:6em;
+    border-radius: 3em;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+.labelCard h4{
+    margin:3em 0em 0.1em 0em;
+    font-weight: 500;
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+}
+
+.labelDescription{
+    font-size: 0.7em;
+}
+
+.labelCard p{
+    align-self: flex-start;
+    margin: 2em;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+}
+
+.labelPostImage{
+    width: 76%;
+    border: 0.25em solid white;
+    margin-bottom: 1em;
+}
+
+/*subscription section*/
+#payTabContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-row: auto;
+    width:100%;
+    margin: auto;
+    position: relative;
+}
+
+.payTab{
+    position: relative;
+}
+
+#payTabContainer label{
+    width: 8em;
+    height:3em;
+    display: flex;
+    border-radius: 0.3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    box-shadow: 0 0 0 .2em #2a3638;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #2a3638;
+}
+
+#payTabContainer label:hover{
+    cursor: pointer;
+    color:rgb(104, 104, 104);
+}
+#payTabContainer [type="radio"] {
+    position: relative;
+    top: 2em;
+    opacity: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+#monthly:checked ~ #monthlyLabel{
+    background: #a52333;
+    color:white;
+    z-index: 2;
+    cursor: default;
+}
+
+#yearly:checked ~ #yearlyLabel{
+    background: #a52333;
+    color:white;
+    z-index: 2;
+    cursor: default;
+}
+
+#yearly:checked ~ #yearlyLabel{
+    background: #a52333;
+    color:white;
+    z-index: 2;
+}
+
+#subscriberPrice::after{
+    content: "19";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #subscriberPrice::after{
+    content: "9";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #artistPrice::after{
+    content: "49";
+}
+
+#artistPrice::after{
+    content: "59";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #labelPrice::after{
+    content: "380";
+}
+
+#labelPrice::after{
+    content: "400";
+}
+
+#yearly{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: start;
+}
+
+#monthly{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: end;
+}
+
+#monthlyLabel{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    justify-self: end;
+}
+
+#yearlyLabel{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    justify-self: start;
+}
+
+
+#cardsContainer{
+    display: flex;
+    flex-direction: row;
+    grid-row-start: 4;
+    grid-column: 1/-1;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    width: 80%;
+    max-width: 52em;
+
+}
+.subscriptionCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a3638;
+    width: 14em;
+    margin: 1em 1.5em;
+    box-shadow: 0.25em 0.25em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.subscriptionCard h3{
+    font-size: 1.7em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 1em 0em 0.8em 0em;
+}
+
+.priceText{
+    font-size: 2.5em;
+    color: #00c5e5;
+}
+
+.monthText{
+    font-size:0.8em;
+}
+
+.subscriptionCard ul{
+    list-style-type: none;
+    padding:1em 1em;
+    box-sizing: border-box;
+    margin:0em;
+}
+.subscriptionCard ul li{
+    margin: 2em 0em;
+}
+.subscriptionCard ul li h5{
+    margin: 0em 0em 0.6em 0em;
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+.subscriptionCard ul li span{
+    font-size: 0.9em;
+}
+
+#emailInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin:4em 0em 10em 0em;
+    height: 10em;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+#emailInfo input[type=text]{
+    width: 22em;
+    outline:none;
+    background-color: #2a3638;
+    border:none;
+    padding: 1em;
+    margin-right:0.3em;
+    box-sizing: border-box;
+    border-radius: 0.2em;
+    color:#a4bdc0;
+}
+
+#searchBar{
+    display: flex;
+    flex-direction: row;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding:1.5em;
+    width:100%;
+    min-height:17em;
+    background-color: #2a3638;
+    color:#7d9598;
+    align-items: center;
+}
+
+#companyDescription{
+    width: 18em;
+    max-height: 13em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2em;
+    
+}
+
+#companyDescription header{
+    margin-bottom: 1em
+}
+
+#companyDescription span{
+    font-size:0.8em;
+    font-weight:300;
+}
+
+#companyDescription p{
+    font-size: 0.85em;
+    line-height: 1.4em;
+}
+
+#directories{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#directory{
+    margin:1em 2em 0em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+#directory ul{
+    min-width: max-content;
+    list-style-type: none;
+    padding:0em;
+    margin-top: 1em;
+}
+
+#directory span{
+    font-weight: 500;
+}
+#directory ul li{
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    margin: 1em 0em
+}
+
+#directory ul li:hover{
+    cursor: pointer;
+    color: #00b1ce;
+}
+
+/* Buttons */
+.redButtonBig{
+    margin: 0.1em;
+    padding: 0em 1.6em;
+    min-height: 2.8em;
+    font-size: 1.3em;
+    color:white;
+    border-radius: 1.5em;
+    background-color: #b93545;
+}
+
+.redButtonBig:hover{
+    min-height: 3em;
+    padding: 0em 1.7em;
+    border-radius: 1.6em;
+    margin:0em;
+    background-color: #a52333;
+}
+
+.redButtonSmall{
+    margin: 0.1em;
+    padding: 0em 1.3em;
+    min-height: 2.4em;
+    font-size: 1em;
+    color:white;
+    border-radius: 1.1em;
+    background-color: #b93545;
+}
+
+.redButtonSmall:hover{
+    min-height: 2.6em;
+    padding: 0em 1.4em;
+    border-radius: 1.2em;
+    margin:0em;
+    background-color: #a52333;
+}
