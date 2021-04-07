@@ -2,7 +2,7 @@
 
 *For the lab, I created a community and blog page for korean hiphop and rnb page by following the structure of https://simpleanalytics.com*
 
-[deployed url](http://url-if-deployed-here)
+[deployed url](https://dartmouth-cs52-21s.github.io/lab1-landingpage-sjlee4108/)
 
 ## What Worked Well
 
