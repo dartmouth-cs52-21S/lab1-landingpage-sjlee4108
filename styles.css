@@ -5,6 +5,21 @@ body{
     background-color:#20292a;
     color:#a4bdc0;
     overflow-x: hidden;
+    background-image: url("./photos/background8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    overflow-x: hidden;
+    }
+
+a{
+    color:#1c96aa;
+}
+
+a:hover{
+    color:#00b1ce;
 }
 
 input[type="button"]{
@@ -24,6 +39,72 @@ input[type="button"]{
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* hamburger: credit from "checkbox hack" and https://codepen.io/erikterwan/pen/EVzeRP*/
+body > input[type = "checkbox"]{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 2.2em;
+    left: calc(100% - 4.9em);
+    opacity: 0;
+    cursor: pointer;
+    z-index: -1;
+}
+
+body > span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 2.85em;
+  left: calc(100% - 3.65em);
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 3;
+  opacity: 0;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+body > span:first-of-type
+{
+    top: 2.2em;
+    transform-origin: 0% 0%;
+}
+
+body > span:nth-child(4)
+{
+  transform-origin: 0% 100%;
+  top: 3.5em;
+}
+
+body > input[type = "checkbox"]:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+body > input[type = "checkbox"]:checked ~ span:nth-of-type(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+body > input[type = "checkbox"]:checked ~ span:nth-child(4)
+{
+  transform: rotate(-45deg) translate(0, -1px);
 }
 
 .logoHeader{
@@ -52,6 +133,7 @@ input[type="button"]{
     justify-content: space-between;
     font-size: 1.1em;
     letter-spacing: 0.1em;
+    padding: 0em;
 }
 
 #topNav ul li:hover{
@@ -67,8 +149,7 @@ main{
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
-      
+    padding: 2em;  
 }
 
 main h1{
@@ -76,7 +157,32 @@ main h1{
     font-size: 3.5em;
     font-weight: 500;
     line-height: 1.2em;
+    letter-spacing: 0.02em;
 }
+
+main h1 div{
+    text-align: center;
+    margin-left: 0.4em;
+    white-space: nowrap;
+    border-right: 2px solid rgba(255,255,255,.75);
+    overflow: hidden;
+    animation: typewriter 6s steps(15) 1s infinite normal both,
+                blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+/* credit: https://css-tricks.com/snippets/css/typewriter-effect/ */
+@keyframes typewriter{
+    0%{width: 0em;}
+    20%{width: 7.5em;}
+    60%{width: 7.5em;}
+    80%{width: 0em;}
+    100%{width: 0em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
 
 main ul{
     display: flex;
@@ -86,7 +192,7 @@ main ul{
     list-style-type: none;
     align-items: center;
     justify-content: space-around;
-    padding: 2em;
+    padding:0em;
 }
 
 main ul li{
@@ -99,6 +205,12 @@ main ul li{
     letter-spacing: 0.1em;
     font-size: 1em;
     line-height: 1.5em;
+    padding: 1.5em;
+}
+
+main ul li img{
+    height:2.5em;
+    filter: invert(68%) sepia(65%) saturate(5891%) hue-rotate(154deg) brightness(98%) contrast(101%);
 }
 
 /* Video section */
@@ -110,6 +222,7 @@ h2{
 }
 
 section{
+    position:relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +253,7 @@ section{
     width: 80%;
     height: 1.5em;
     border-radius: 100%/0 0 2em 2em;
-    background-color: rgb(42,54,56);
+    background-color: rgb(81, 98, 100);
     margin:auto;
     margin-bottom: 2em;
 }
@@ -194,16 +307,20 @@ article{
 
 .blogSummary p{
     letter-spacing: 0.05em;
+    line-height: 1.5em;
+    font-size: 0.85em;
 }
 
 /* Style for label cards section */
 
 #labelCardContainer{
-    margin: 3em 0em;
+    box-sizing: border-box;
+    padding: 3em 0em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 .labelCard{
@@ -289,11 +406,12 @@ article{
     color:rgb(104, 104, 104);
 }
 #payTabContainer [type="radio"] {
+    cursor: pointer;
     position: relative;
     top: 2em;
     opacity: 0;
     margin: 0;
-    z-index: 1;
+    z-index: -1;
   }
 
 #monthly:checked ~ #monthlyLabel{
@@ -308,12 +426,6 @@ article{
     color:white;
     z-index: 2;
     cursor: default;
-}
-
-#yearly:checked ~ #yearlyLabel{
-    background: #a52333;
-    color:white;
-    z-index: 2;
 }
 
 #subscriberPrice::after{
@@ -463,6 +575,7 @@ footer{
     background-color: #2a3638;
     color:#7d9598;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #companyDescription{
@@ -490,12 +603,13 @@ footer{
 }
 
 #directories{
+    margin-top:2em;
+    width: fit-content;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 #directory{
@@ -560,4 +674,162 @@ footer{
     border-radius: 1.2em;
     margin:0em;
     background-color: #a52333;
+}
+
+
+/*scollbar design*/
+
+* {
+  scrollbar-color: linear-gradient(180deg, #CD2E3A 11.98%, #0047A0 94.79%) #2a3638; /* thumb and track color */
+  scrollbar-width: 0.5em;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2a3638;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #CD2E3A 11.98%, #0047A0 94.79%);
+  border-radius: 0.25em;
+}
+
+
+
+/* EC: animated sldiers*/
+/* credit for custom radio button: https://stackoverflow.com/questions/4253920/how-do-i-change-the-color-of-radio-buttons */
+.slideButton:after {
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #525252;
+    content: '';
+    display: inline-flex;
+    visibility: visible;
+    border: 1px solid #525252
+}
+
+.slideButton:checked::after{
+    background-color: #343131;
+}
+
+.slideButton:hover{
+    cursor:pointer;
+}
+
+#slide-1{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% - 4em);
+}
+
+#slide-2{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% - 2em);
+}
+#slide-3{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49%);
+}
+#slide-4{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% + 2em);
+}
+#slide-5{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% + 4em);
+}
+
+
+#slide-5:checked ~ #labelCardContainer{
+    transform: translateX(-50em);
+    transition: 0.5s ease;
+}
+
+#slide-4:checked ~ #labelCardContainer{
+    transform: translateX(-25em);
+    transition: 0.5s ease;
+}
+
+#slide-3:checked ~ #labelCardContainer{
+    transform: translateX(0em);
+    transition: 0.5s ease;
+}
+
+#slide-2:checked ~ #labelCardContainer{
+    transform: translateX(25em);
+    transition: 0.5s ease;
+}
+
+#slide-1:checked ~ #labelCardContainer{
+    transform: translateX(50em);
+    transition: 0.5s ease;
+}
+
+/* mobile page */
+@media only screen and (max-width: 760px) {
+
+    #topNav{
+        margin:0em;
+    }
+
+    #topNav ul{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #topNav ul li{
+        width:100%;
+        padding: 0.6em 0em
+    }
+
+    #menu{
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: hidden;
+    }
+
+    #menu header{
+        display: flex;
+        padding:1.65em 0em;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    body input[type="checkbox"]{
+        z-index:4;
+    }
+
+    body input[type="checkbox"]:checked ~ #menu{
+        animation: menuOpen 1s 1 forwards;
+    }
+
+    @keyframes menuOpen{
+        100%{height: 21em;}
+    }
+    body > span{
+        opacity: 1;
+        z-index:3;
+    }
+
+    main h1{
+        font-size: 2em;
+    }
 }

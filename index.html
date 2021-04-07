@@ -7,13 +7,20 @@
         </title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="./photos/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
       
     <body>
+         <!-- hamburger menu -->
+         <input type="checkbox" />
+         <span></span>
+         <span></span>
+         <span></span>
         <div id = "menu">
             <header>
                 <a href = "#" class = "logoHeader"><img class = "logoImg" src = "./photos/icon.png" alt = " "/> K-Gang</a>
             </header>
+            
             <nav id = "topNav">
                 <ul>
                     <li>About Us</li>
@@ -28,20 +35,22 @@
             <header>
                 <h1> Simple and friendly </br>
                     community for <br/>
-                    K-hiphop & RnB</h1>
+                    <div>K-hiphop & RnB</div></h1>
             </header>
+
+            <!-- png credit: https://www.flaticon.com/packs/miscellaneous-elements -->
             <ul>
                 <li>
-                    <img src = "" alt = " "/>
-                    <p>We show you the essentials: page views, referrers, top pages, and screen sizes. We enrich this data with useful info</p>
+                    <img src = "photos/file.png" alt = " "/>
+                    <p>We keep fans on track with the scene: editor's blogs and news feed. We also recommend variety of songs to help you explore.</p>
                 </li>
                 <li>
-                    <img src = "" alt = " "/>
-                    <p>We show you the essentials: page views, referrers, top pages, and screen sizes. We enrich this data with useful info</p>
+                    <img src = "photos/chat.png" alt = " "/>
+                    <p>We connect fans with artists: artists and label pages. Artists can post their songs and interact with fans</p>
                 </li>
                 <li>
-                    <img src = "" alt = " "/>
-                    <p>We show you the essentials: page views, referrers, top pages, and screen sizes. We enrich this data with useful info</p>
+                    <img src = "photos/planet-earth.png" alt = " "/>
+                    <p>We connect fans from all over the world through the community page. Fans can post and exchange opinions</p>
                 </li>
             </ul>
             <input class = "redButtonBig" type = "button" value = "Join Us"/>
@@ -51,7 +60,7 @@
         <section>
             <h2>Music of the Week</h2>
             <div id = "laptopScreen">
-                <iframe id = "videoFrame" src="https://www.youtube.com/embed/E-8pyVBvCPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id = "videoFrame" src="https://www.youtube.com/embed/E-8pyVBvCPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" scrolling="yes" allowfullscreen></iframe>
             </div>
             <div id = "laptopBottom"></div>
             <br/>
@@ -63,27 +72,27 @@
             <article> 
                 <img class = "blogImage" src = "./photos/beenzino2.jpeg" alt = " "/>
                 <div class = "blogSummary">
-                    <h3>Title for article 1</h3>
-                    <p>Article material in paragraph</p>
-                    <a href = "#">Read more.</a>
+                    <h3>Beenzino Signs with BANA</h3>
+                    <p>Beenzino has signed with BANA(Beats and Natives), joining E-Sens and Masta Wu! He recently released a new song called "Monet" and is currently working on his next album called Nowitzki. Beenzino also announced that ...</p>
+                    <a href = "#">Read More</a>
                 </div>
             </article>
 
             <article>
                 <img class = "blogImage" src = "./photos/jazzyfact.jpeg" alt = " "/>
                 <div class = "blogSummary">
-                    <h3>Title for article 1</h3>
-                    <p>Article material in paragraph</p>
-                    <a href = "#">Read more.</a>
+                    <h3>[Editor's Choice 3] Lifes Like</h3>
+                    <p>For this week's recommended album, Jazzyfact's Lifes Like is one of the tracks that K-hiphop beginners should listen to. Jazzyfact is a South Korean duo made up of producer Shimmy Twice and rapper Beenzino. They became iconic with their album ...</p>
+                    <a href = "#">Read More</a>
                 </div>
             </article>
 
             <article>
                 <img class = "blogImage" src = "./photos/highschool.jpeg" alt = " "/>
                 <div class = "blogSummary">
-                    <h3>Title for article 1</h3>
-                    <p>Article material in paragraph</p>
-                    <a href = "#">Read more.</a>
+                    <h3>[HS Rapper 4 Review] Episode 7</h3>
+                    <p>The teams split into pairs and create a rap based on the context of textbooks. The pairs face off, eliminating half of the contestants based on scores from the special guests and virtual audiences. This episode has been controversial as ...</p>
+                    <a href = "#">Read More</a>
                 </div>
             </article>
             <input class = "redButtonSmall" type = "button" value = "Read more posts"/>
@@ -91,8 +100,12 @@
 
         <section>
             <h2>Updates from Labels</h2>
+            <input type = "radio" name = "labelSlide" id = "slide-1" class = "slideButton">
+            <input type = "radio" name = "labelSlide" id = "slide-2" class = "slideButton">
+            <input type = "radio" name = "labelSlide" id = "slide-3" class = "slideButton" checked>
+            <input type = "radio" name = "labelSlide" id = "slide-4" class = "slideButton">
+            <input type = "radio" name = "labelSlide" id = "slide-5" class = "slideButton">
             <div id = "labelCardContainer">
-
                 <div class = "labelCard">
                     <img src = "./photos/hi_lite.png" alt = " " class = "labelCardProfile"/>
                     <h4>Hi-Lite Records</h4>
@@ -103,7 +116,7 @@
                         <br/><br/>
                         Go check out the video on our official YouTube Channel!
                     </p>
-                    <a href = "#">Read more.</a>
+                    <a href = "#">Read More</a>
                 </div>
 
                 <div class = "labelCard">
@@ -118,7 +131,16 @@
                         2. Open Up (Feat. JUSTHIS)
                     </p>
                     <img src = "./photos/daisy.jpeg" alt = " " class = "labelPostImage"/>
-                    <a href = "#">Read more.</a>
+                    <a href = "#">Read More</a>
+                </div>
+
+                <div class = "labelCard">
+                    <img src = "https://pbs.twimg.com/profile_images/781012403416887296/qZ0qJcfc_400x400.jpg" alt = " " class = "labelCardProfile"/>
+                    <h4>Ambition Musik</h4>
+                    <span class = "labelDescription">K-hiphop label</span>
+                    <p>ASH ISLAND's new album "ISLAND" out NoW!</p>
+                    <img src = "https://pbs.twimg.com/media/EvtOXKfUUAAPEMn?format=jpg&name=large" alt = " " class = "labelPostImage"/>
+                    <a href = "#">Read More</a>
                 </div>
 
                 <div class = "labelCard">
@@ -129,23 +151,30 @@
                         Han Yo Han Digital Single [#Humidifier] now available in: Korean music streaming sites & iTunes Store (Timing of music's release can differ depending on  country and/or location).
                     </p>
                     <img src = "https://pbs.twimg.com/media/Ex7eqq0VoAEGI2w?format=jpg&name=medium" alt = " " class = "labelPostImage"/>
-                    <a href = "#">Read more.</a>
+                    <a href = "#">Read More</a>
                 </div>
 
-            
+                <div class = "labelCard">
+                    <img src = "https://pbs.twimg.com/profile_images/940178936247414784/gC9kpePx_400x400.jpg" alt = " " class = "labelCardProfile"/>
+                    <h4>AOMG</h4>
+                    <span class = "labelDescription">K-hiphop label</span>
+                    <p>
+                        [Season Premiere]<br/>
+                        2021. 04. 20. TUE 8PM(KST)<br/>
+                        on AOMGOFFICIAL YouTube<br/>
+                        <br/><br/>
+                        2021. 04. 13. TUE 6PM (KST)<br/>
+                        Pre-release on #Seezn
+                    </p>
+                    <a href = "#">Read More</a>
+                </div>
             </div>
             <input class = "redButtonSmall" type = "button" value = "Read more posts"/>
         </section>
 
         <section>
             <h2>Join our exclusive membership</h2>
-            <!-- <div class="paymentTab">
-                <input id = "monthly" type="radio" name="tab-group-1" checked>
-                <label for="monthly">Tab One</label>
-                <input id = "yearly" type="radio" name="tab-group-1">
-                <label for="yearly">Tab One</label>
-            </div> -->
-
+            
             <div id="payTabContainer">
                 <input type="radio" id="monthly" name="tab-group-1"  checked/>
                 <input type="radio" id="yearly" name="tab-group-1" />
@@ -222,9 +251,7 @@
                                 <span>No</span>
                             </li>
                         </ul>
-                    </div>
-                    
-                    
+                    </div> 
                 </div>
             </div>
 
@@ -255,14 +282,6 @@
                     <li>Our Service</li>
                     <li>Pricing</li>
                     <li>Q&A</li>
-                </ul>
-            </div>
-            <div id = "directory">
-                <span>Contacts</span>
-                <ul>
-                    <li>Email Adresses</li>
-                    <li>Contact Form</li>
-                    <li>Facebook</li>
                 </ul>
             </div>
             <div id = "directory">
