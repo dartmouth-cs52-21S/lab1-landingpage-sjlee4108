@@ -1,0 +1,850 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em;
+    padding:0em;
+    background-color:#20292a;
+    color:#a4bdc0;
+    overflow-x: hidden;
+    background-image: url("./photos/background8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    overflow-x: hidden;
+    }
+
+a{
+    color:#1c96aa;
+}
+
+a:hover{
+    color:#00b1ce;
+}
+
+input[type="button"]{
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* Nav section */
+#menu{
+    display: flex;
+    width:100%;
+    height: 6em;
+    background-color:#2a3638;
+    padding:0em 3em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* hamburger: credit from "checkbox hack" and https://codepen.io/erikterwan/pen/EVzeRP*/
+body > input[type = "checkbox"]{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 2.2em;
+    left: calc(100% - 4.9em);
+    opacity: 0;
+    cursor: pointer;
+    z-index: -1;
+}
+
+body > span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 2.85em;
+  left: calc(100% - 3.65em);
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 3;
+  opacity: 0;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+body > span:first-of-type
+{
+    top: 2.2em;
+    transform-origin: 0% 0%;
+}
+
+body > span:nth-child(4)
+{
+  transform-origin: 0% 100%;
+  top: 3.5em;
+}
+
+body > input[type = "checkbox"]:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+body > input[type = "checkbox"]:checked ~ span:nth-of-type(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+body > input[type = "checkbox"]:checked ~ span:nth-child(4)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.logoHeader{
+    font-size: 1.3em;
+    letter-spacing: 0.13em;
+    width: 7.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logoImg{
+    width: 2.5em;
+}
+
+#topNav{
+    width: 30em;
+}
+#topNav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    padding: 0em;
+}
+
+#topNav ul li:hover{
+    cursor: pointer;
+    color: #00b1ce;
+}
+
+/* main section */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;  
+}
+
+main h1{
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: 0.02em;
+}
+
+main h1 div{
+    text-align: center;
+    margin-left: 2.6em;
+    white-space: nowrap;
+    border-right: 2px solid rgba(255,255,255,.75);
+    overflow: hidden;
+    animation: blinkTextCursor 500ms steps(44) infinite normal,
+            typewriter 10s steps(15) infinite normal both;
+    
+}
+
+
+main h1 div:after{
+    content:"K-hiphop";
+    animation: changeText 10s steps(15) 1s infinite normal both;
+}
+
+/* credit: https://css-tricks.com/snippets/css/typewriter-effect/ */
+@keyframes typewriter{
+    0%{width: 0em;}
+    10%{width: 4.3em;}
+    30%{width: 4.3em;}
+    40%{width: 0em;}
+    55%{width: 0em;}
+    60%{width: 3.1em;}
+    80%{width: 3.1em;}
+    85%{width: 0em;}
+    100%{width: 0em;} 
+}
+
+@keyframes changeText{
+    60%{content: "K-R&B";}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+main ul{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    padding:0em;
+}
+
+main ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 14em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 1.5em;
+}
+
+main ul li img{
+    height:2.5em;
+    filter: invert(68%) sepia(65%) saturate(5891%) hue-rotate(154deg) brightness(98%) contrast(101%);
+}
+
+/* Video section */
+h2{
+    font-size: 2.7em;
+    font-weight: 300;
+    text-align: center;
+    margin: 3em 0 1em 0;
+}
+
+section{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*credit https://stackoverflow.com/questions/22995790/html-height-as-a-percentage-of-the-width-for-iframe*/
+#laptopScreen{
+    width: 64%;
+    margin: auto;
+    padding-top:36%;
+    position: relative;
+    border:solid black;
+    border-width: 1.5em 1.5em;
+    border-radius: 0.8em 0.8em 0 0;
+
+}
+#videoFrame{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/* credit https://stackoverflow.com/questions/41609308/curved-border-with-stroke-in-pure-css */
+#laptopBottom{
+    width: 80%;
+    height: 1.5em;
+    border-radius: 100%/0 0 2em 2em;
+    background-color: rgb(81, 98, 100);
+    margin:auto;
+    margin-bottom: 2em;
+}
+
+/*Blog related styles*/
+article{
+    width: 80%;
+    max-width: 55em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1em 0em 4em 0em;
+}
+
+.blogImage{
+    margin:0.2em;
+    width: 22em;
+    height:17em;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.25);
+}
+
+.blogImage:hover{
+    margin:0em;
+    width: 22.4em;
+    height: 17.4em;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+
+
+.blogSummary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 3em;
+    margin-right: 2em;
+    min-height: 16em;
+    min-width: 18em;
+    max-width: 24em;
+}
+
+.blogSummary h3{
+    font-size:2em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin:0.5em 0em 0.5em 0em;
+}
+
+.blogSummary p{
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    font-size: 0.85em;
+}
+
+/* Style for label cards section */
+
+#labelCardContainer{
+    box-sizing: border-box;
+    padding: 3em 0em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.labelCard{
+    display: flex;
+    flex-direction: column;
+    width: 21em;
+    align-items: center;
+    background-color: #2a3638;
+    box-sizing: border-box;
+    padding:0em 1em 1em 1em;
+    margin: 0em 2em;
+    box-shadow: 0.25em 0.25em 0.3em rgba(0, 0, 0, 0.2);
+
+}
+
+.labelCardProfile{
+    position: absolute;
+    width: 6em;
+    height:6em;
+    border-radius: 3em;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0.25em 0.25em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+.labelCard h4{
+    margin:3em 0em 0.1em 0em;
+    font-weight: 500;
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+}
+
+.labelDescription{
+    font-size: 0.7em;
+}
+
+.labelCard p{
+    align-self: flex-start;
+    margin: 2em;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+}
+
+.labelPostImage{
+    width: 76%;
+    border: 0.25em solid white;
+    margin-bottom: 1em;
+}
+
+/*subscription section*/
+#payTabContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-row: auto;
+    width:100%;
+    margin: auto;
+    position: relative;
+}
+
+.payTab{
+    position: relative;
+}
+
+#payTabContainer label{
+    width: 8em;
+    height:3em;
+    display: flex;
+    border-radius: 0.3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    box-shadow: 0 0 0 .2em #2a3638;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #2a3638;
+}
+
+#payTabContainer label:hover{
+    cursor: pointer;
+    color:rgb(104, 104, 104);
+}
+#payTabContainer [type="radio"] {
+    cursor: pointer;
+    position: relative;
+    top: 2em;
+    opacity: 0;
+    margin: 0;
+    z-index: -1;
+  }
+
+#monthly:checked ~ #monthlyLabel{
+    background: #a52333;
+    color:white;
+    z-index: 2;
+    cursor: default;
+}
+
+#yearly:checked ~ #yearlyLabel{
+    background: #a52333;
+    color:white;
+    z-index: 2;
+    cursor: default;
+}
+
+#subscriberPrice::after{
+    content: "19";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #subscriberPrice::after{
+    content: "9";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #artistPrice::after{
+    content: "49";
+}
+
+#artistPrice::after{
+    content: "59";
+}
+
+#yearly:checked ~ #cardsContainer .subscriptionCard #labelPrice::after{
+    content: "380";
+}
+
+#labelPrice::after{
+    content: "400";
+}
+
+#yearly{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: start;
+}
+
+#monthly{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: end;
+}
+
+#monthlyLabel{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    justify-self: end;
+}
+
+#yearlyLabel{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    justify-self: start;
+}
+
+
+#cardsContainer{
+    display: flex;
+    flex-direction: row;
+    grid-row-start: 4;
+    grid-column: 1/-1;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    width: 80%;
+    max-width: 52em;
+
+}
+.subscriptionCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a3638;
+    width: 14em;
+    margin: 1em 1.5em;
+    box-shadow: 0.25em 0.25em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.subscriptionCard h3{
+    font-size: 1.7em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 1em 0em 0.8em 0em;
+}
+
+.priceText{
+    font-size: 2.5em;
+    color: #00c5e5;
+}
+
+.monthText{
+    font-size:0.8em;
+}
+
+.subscriptionCard ul{
+    list-style-type: none;
+    padding:1em 1em;
+    box-sizing: border-box;
+    margin:0em;
+}
+.subscriptionCard ul li{
+    margin: 2em 0em;
+}
+.subscriptionCard ul li h5{
+    margin: 0em 0em 0.6em 0em;
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+.subscriptionCard ul li span{
+    font-size: 0.9em;
+}
+
+#emailInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin:4em 0em 10em 0em;
+    height: 10em;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+#emailInfo input[type=text]{
+    width: 22em;
+    outline:none;
+    background-color: #2a3638;
+    border:none;
+    padding: 1em;
+    margin-right:0.3em;
+    box-sizing: border-box;
+    border-radius: 0.2em;
+    color:#a4bdc0;
+}
+
+#searchBar{
+    display: flex;
+    flex-direction: row;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding:1.5em;
+    width:100%;
+    min-height:17em;
+    background-color: #2a3638;
+    color:#7d9598;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#companyDescription{
+    width: 18em;
+    max-height: 13em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2em;
+    
+}
+
+#companyDescription header{
+    margin-bottom: 1em
+}
+
+#companyDescription span{
+    font-size:0.8em;
+    font-weight:300;
+}
+
+#companyDescription p{
+    font-size: 0.85em;
+    line-height: 1.4em;
+}
+
+#directories{
+    margin-top:2em;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#directory{
+    margin:1em 2em 0em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+#directory ul{
+    min-width: max-content;
+    list-style-type: none;
+    padding:0em;
+    margin-top: 1em;
+}
+
+#directory span{
+    font-weight: 500;
+}
+#directory ul li{
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    margin: 1em 0em
+}
+
+#directory ul li:hover{
+    cursor: pointer;
+    color: #00b1ce;
+}
+
+/* Buttons */
+.redButtonBig{
+    margin: 0.1em;
+    padding: 0em 1.6em;
+    min-height: 2.8em;
+    font-size: 1.3em;
+    color:white;
+    border-radius: 1.5em;
+    background-color: #b93545;
+}
+
+.redButtonBig:hover{
+    min-height: 3em;
+    padding: 0em 1.7em;
+    border-radius: 1.6em;
+    margin:0em;
+    background-color: #a52333;
+}
+
+.redButtonSmall{
+    margin: 0.1em;
+    padding: 0em 1.3em;
+    min-height: 2.4em;
+    font-size: 1em;
+    color:white;
+    border-radius: 1.1em;
+    background-color: #b93545;
+}
+
+.redButtonSmall:hover{
+    min-height: 2.6em;
+    padding: 0em 1.4em;
+    border-radius: 1.2em;
+    margin:0em;
+    background-color: #a52333;
+}
+
+
+/*scollbar design*/
+
+* {
+  scrollbar-color: linear-gradient(180deg, #CD2E3A 11.98%, #0047A0 94.79%) #2a3638; /* thumb and track color */
+  scrollbar-width: 0.5em;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2a3638;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #CD2E3A 11.98%, #0047A0 94.79%);
+  border-radius: 0.25em;
+}
+
+
+
+/* EC: animated sldiers*/
+/* credit for custom radio button: https://stackoverflow.com/questions/4253920/how-do-i-change-the-color-of-radio-buttons */
+.slideButton:after {
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #525252;
+    content: '';
+    display: inline-flex;
+    visibility: visible;
+    border: 1px solid #525252
+}
+
+.slideButton:checked::after{
+    background-color: #343131;
+}
+
+.slideButton:hover{
+    cursor:pointer;
+}
+
+#slide-1{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% - 4em);
+}
+
+#slide-2{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% - 2em);
+}
+#slide-3{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49%);
+}
+#slide-4{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% + 2em);
+}
+#slide-5{
+    position: absolute;
+    bottom:8%;
+    z-index:3;
+    left: calc(49% + 4em);
+}
+
+
+#slide-5:checked ~ #labelCardContainer{
+    transform: translateX(-50em);
+    transition: 0.5s ease;
+}
+
+#slide-4:checked ~ #labelCardContainer{
+    transform: translateX(-25em);
+    transition: 0.5s ease;
+}
+
+#slide-3:checked ~ #labelCardContainer{
+    transform: translateX(0em);
+    transition: 0.5s ease;
+}
+
+#slide-2:checked ~ #labelCardContainer{
+    transform: translateX(25em);
+    transition: 0.5s ease;
+}
+
+#slide-1:checked ~ #labelCardContainer{
+    transform: translateX(50em);
+    transition: 0.5s ease;
+}
+
+/* mobile page */
+@media only screen and (max-width: 760px) {
+
+    #topNav{
+        margin:0em;
+    }
+
+    #topNav ul{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #topNav ul li{
+        width:100%;
+        padding: 0.6em 0em
+    }
+
+    #menu{
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-y: hidden;
+    }
+
+    #menu header{
+        display: flex;
+        padding:1.65em 0em;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    body input[type="checkbox"]{
+        z-index:4;
+    }
+
+    body input[type="checkbox"]:checked ~ #menu{
+        animation: menuOpen 1s 1 forwards;
+    }
+
+    @keyframes menuOpen{
+        100%{height: 21em;}
+    }
+    body > span{
+        opacity: 1;
+        z-index:3;
+    }
+
+    main h1{
+        font-size: 2em;
+    }
+}
