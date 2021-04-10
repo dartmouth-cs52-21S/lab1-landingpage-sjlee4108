@@ -162,21 +162,36 @@ main h1{
 
 main h1 div{
     text-align: center;
-    margin-left: 0.4em;
+    margin-left: 2.6em;
     white-space: nowrap;
     border-right: 2px solid rgba(255,255,255,.75);
     overflow: hidden;
-    animation: typewriter 6s steps(15) 1s infinite normal both,
-                blinkTextCursor 500ms steps(44) infinite normal;
+    animation: blinkTextCursor 500ms steps(44) infinite normal,
+            typewriter 10s steps(15) infinite normal both;
+    
+}
+
+
+main h1 div:after{
+    content:"K-hiphop";
+    animation: changeText 10s steps(15) 1s infinite normal both;
 }
 
 /* credit: https://css-tricks.com/snippets/css/typewriter-effect/ */
 @keyframes typewriter{
     0%{width: 0em;}
-    20%{width: 7.5em;}
-    60%{width: 7.5em;}
-    80%{width: 0em;}
-    100%{width: 0em;}
+    10%{width: 4.3em;}
+    30%{width: 4.3em;}
+    40%{width: 0em;}
+    55%{width: 0em;}
+    60%{width: 3.1em;}
+    80%{width: 3.1em;}
+    85%{width: 0em;}
+    100%{width: 0em;} 
+}
+
+@keyframes changeText{
+    60%{content: "K-R&B";}
 }
 
 @keyframes blinkTextCursor{
